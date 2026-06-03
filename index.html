@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Professional AI-generated headshots in minutes. Transform your selfies into studio-quality portraits — no photographer needed.">
+<title>HeadshotPro — AI-Generated Professional Headshots</title>
+<style>
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1e293b;
+  background: #fff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ========================================
+   UTILITY
+   ======================================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary {
+  background: #2563eb;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(37,99,235,0.25);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2563eb;
+  border: 1.5px solid #2563eb;
+}
+.btn-outline:hover {
+  background: #eff6ff;
+  border-color: #2563eb;
+}
+
+.btn-white {
+  background: #fff;
+  color: #2563eb;
+}
+.btn-white:hover {
+  background: #eff6ff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #2563eb;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: #6b7280;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+}
+.logo span { color: #2563eb; }
+
+.nav { display: flex; align-items: center; gap: 36px; }
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #525252;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: #2563eb; }
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.mobile-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #0a0a0a;
+  margin: 5px 0;
+  border-radius: 1px;
+  transition: all 0.2s;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  padding: 160px 0 120px;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.hero-text { max-width: 560px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  border: 1px solid #bfdbfe;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-qr img {
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.hero-qr span {
+  font-size: 0.72rem;
+  color: #a3a3a3;
+}
+
+/* Hero visual — headshot grid */
+.hero-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  max-width: 420px;
+}
+
+.headshot-card {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease;
+  aspect-ratio: 3 / 4;
+  background: #f5f5f5;
+}
+.headshot-card:hover {
+  transform: scale(1.02);
+}
+
+.headshot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ========================================
+   SOCIAL PROOF
+   ======================================== */
+.social-proof {
+  padding: 56px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.03em;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: #737373;
+  margin-top: 6px;
+}
+.stat-stars { color: #f59e0b; font-size: 1.15rem; letter-spacing: 2px; }
+
+.stat-divider {
+  width: 1px;
+  background: #e5e5e5;
+  align-self: stretch;
+}
+
+/* ========================================
+   HOW IT WORKS
+   ======================================== */
+.how { padding: 120px 0; background: #fff; }
+
+.how-header { text-align: center; margin-bottom: 72px; }
+.how-header .section-subtitle { margin: 0 auto; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  padding: 40px 32px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #e5e5e5;
+}
+.step:last-child::after { display: none; }
+
+.step-num {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #e5e5e5;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: color 0.25s ease;
+}
+
+.step:hover .step-num { color: #2563eb; }
+
+.step h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #737373;
+  line-height: 1.65;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   FEATURES
+   ======================================== */
+.features { padding: 120px 0; background: #fafafa; }
+
+.features-header { text-align: center; margin-bottom: 72px; }
+.features-header .section-subtitle { margin: 0 auto; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feature {
+  padding: 40px 36px;
+  background: #fff;
+  transition: background 0.2s ease;
+}
+.feature:hover {
+  background: #fafafa;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #eff6ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 8px;
+}
+.feature p {
+  font-size: 0.92rem;
+  color: #737373;
+  line-height: 1.65;
+}
+
+/* ========================================
+   DOWNLOAD
+   ======================================== */
+.download { padding: 120px 0; background: #fafafa; }
+
+.download-card {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 64px 56px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.download-card .section-subtitle { margin: 0 auto 36px; }
+
+.download-note {
+  font-size: 0.82rem;
+  color: #a3a3a3;
+  margin-top: 16px;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 16px 40px;
+  gap: 10px;
+}
+
+.qr-wrap {
+  margin: 28px 0 0;
+}
+
+.qr-wrap img {
+  display: block;
+  margin: 0 auto 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.qr-wrap span {
+  font-size: 0.78rem;
+  color: #a3a3a3;
+}
+
+/* ========================================
+   USE CASES
+   ======================================== */
+.usecases { padding: 120px 0; background: #fff; }
+.usecases-header { text-align: center; margin-bottom: 64px; }
+.usecases-header .section-subtitle { margin: 0 auto; }
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.usecase {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
+  transition: transform 0.2s ease;
+}
+.usecase:hover {
+  transform: translateY(-4px);
+}
+
+.usecase-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.usecase-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.usecase-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+}
+
+.usecase h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 6px;
+}
+
+.usecase p {
+  font-size: 0.9rem;
+  color: #737373;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FAQ
+   ======================================== */
+.faq { padding: 120px 0; background: #fafafa; }
+.faq-header { text-align: center; margin-bottom: 56px; }
+.faq-header .section-subtitle { margin: 0 auto; }
+
+.faq-list {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-item {
+  background: #fff;
+  border: none;
+  transition: background 0.15s;
+}
+.faq-item:hover { background: #fafafa; }
+
+.faq-item summary {
+  padding: 22px 28px;
+  font-weight: 500;
+  color: #0a0a0a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 0.95rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #a3a3a3;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item[open] summary::after {
+  content: '−';
+  color: #2563eb;
+}
+.faq-item[open] {
+  background: #fafafa;
+}
+
+.faq-item .faq-answer {
+  padding: 0 28px 22px;
+  font-size: 0.92rem;
+  color: #737373;
+  line-height: 1.7;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: #0a0a0a;
+  color: #737373;
+  padding: 56px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-brand {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+.footer-brand span { color: #6b7280; }
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+.footer-links a {
+  font-size: 0.85rem;
+  color: #737373;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: #fff; }
+
+.footer-bottom {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .container { padding: 0 32px; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .hero-text { max-width: 100%; text-align: center; }
+  .hero-actions { justify-content: center; }
+  .hero-visual {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .hero h1 { font-size: 2.8rem; }
+  .hero { padding: 140px 0 80px; }
+  .section-title { font-size: 2.4rem; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+  .nav .btn-primary { display: none; }
+
+  .hero h1 { font-size: 2.4rem; }
+  .hero p { font-size: 1.05rem; }
+  .section-title { font-size: 2rem; }
+
+  .stats { gap: 36px; }
+  .stat-number { font-size: 1.6rem; }
+  .stat-divider { display: none; }
+
+  .steps { grid-template-columns: 1fr; gap: 0; }
+  .step::after { display: none; }
+  .step { padding: 28px 24px; }
+  .step-num { font-size: 3rem; }
+  .features-grid { grid-template-columns: 1fr; }
+  .usecases-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  .how, .features, .download, .faq, .usecases { padding: 80px 0; }
+  .hero { padding: 120px 0 64px; }
+
+  .download-card { padding: 48px 32px; }
+
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .hero-visual { max-width: 320px; gap: 8px; }
+  .hero-actions { flex-direction: column; gap: 20px; }
+  .hero-actions .btn { width: 100%; text-align: center; justify-content: center; }
+
+  .stats { flex-direction: column; gap: 24px; }
+
+  .usecases-grid { grid-template-columns: 1fr; }
+
+  .download-card { padding: 36px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">Headshot<span>Pro</span></a>
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="#how">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="#download" class="btn btn-primary">Get the App</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge">AI-Powered Professional Headshots</div>
+      <h1>Studio-Quality <span>Headshots</span> in Minutes</h1>
+      <p>Transform your everyday selfies into polished, professional headshots using AI. No photographer, no studio, no hassle — just stunning results you'll be proud to share.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" style="font-size:1rem;padding:16px 40px;gap:10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Download on the App Store
+        </a>
+        <div class="hero-qr">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://apps.apple.com/app/headshotpro&color=2563eb" alt="Scan to download" width="100" height="100">
+          <span>Scan to download</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="headshot-card">
+        <img src="images/headshot-1.jpg" alt="Professional AI headshot example" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="images/headshot-2.jpg" alt="Professional AI headshot example" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="images/headshot-3.jpg" alt="Professional AI headshot example" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="images/headshot-4.jpg" alt="Professional AI headshot example" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SOCIAL PROOF
+     ============================================ -->
+<section class="social-proof">
+  <div class="container">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">200K+</div>
+        <div class="stat-label">Happy Customers</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">15M+</div>
+        <div class="stat-label">Headshots Generated</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number stat-stars">★★★★★</div>
+        <div class="stat-label">4.8 Average Rating</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">7-Day</div>
+        <div class="stat-label">Money-Back Guarantee</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="how-header">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Three simple steps</h2>
+      <p class="section-subtitle">Getting your professional headshot has never been easier. No scheduling, no travel, no waiting.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Upload Your Selfies</h3>
+        <p>Take 5–10 casual selfies with your phone. Good lighting, different angles — that's all our AI needs.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>AI Works Its Magic</h3>
+        <p>Our AI generates dozens of professional headshots with various outfits, backdrops, and styles in under a minute.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Download Your Favorites</h3>
+        <p>Pick the shots you love and download them in high resolution — ready for LinkedIn, email, and more.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FEATURES
+     ============================================ -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Built for professionals</h2>
+      <p class="section-subtitle">Everything you need to get the perfect headshot, without the traditional hassle.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">✨</div>
+        <h3>Studio Quality</h3>
+        <p>Our AI is trained on thousands of professional portraits. The results are crisp, natural, and indistinguishable from studio shots.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Fast Turnaround</h3>
+        <p>Get your headshots in under a minute. No waiting days for a photographer to edit and deliver.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌟</div>
+        <h3>Natural Results</h3>
+        <p>Our AI produces headshots that look authentic and natural — not overly retouched or obviously AI-generated.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Cost Effective</h3>
+        <p>Save 90%+ compared to traditional headshot photography. One-time payment, no subscriptions, full ownership.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy First</h3>
+        <p>Your photos are encrypted during transfer and processing. Never used for AI training, never shared with third parties.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h3>Full Ownership</h3>
+        <p>You own all commercial rights to your generated headshots. Use them anywhere, any way you want.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     USE CASES
+     ============================================ -->
+<section class="usecases">
+  <div class="container">
+    <div class="usecases-header">
+      <div class="section-label">Use Cases</div>
+      <h2 class="section-title">Perfect for every professional</h2>
+      <p class="section-subtitle">From job seekers to executives, AI headshots help you put your best face forward.</p>
+    </div>
+    <div class="usecases-grid">
+      <div class="usecase">
+        <div class="usecase-img"><img src="images/usecase-1.jpg" alt="Job Seekers"></div>
+        <h3>Job Seekers</h3>
+        <p>Make a strong first impression with a polished LinkedIn profile photo that stands out to recruiters.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="images/usecase-2.jpg" alt="Corporate Teams"></div>
+        <h3>Corporate Teams</h3>
+        <p>Get consistent, professional headshots for your entire team — no scheduling, no photographer.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="images/usecase-3.jpg" alt="Freelancers"></div>
+        <h3>Freelancers</h3>
+        <p>Build trust with clients through a professional portrait on your website, proposals, and profiles.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="images/usecase-4.jpg" alt="Real Estate Agents"></div>
+        <h3>Real Estate Agents</h3>
+        <p>Build trust with clients instantly. A polished headshot on listings and cards sets you apart from the competition.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="images/usecase-5.jpg" alt="Executives &amp; Leaders"></div>
+        <h3>Executives &amp; Leaders</h3>
+        <p>Project authority and approachability. A polished executive portrait for board profiles, speaking engagements, and press.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="images/usecase-6.jpg" alt="Entrepreneurs"></div>
+        <h3>Entrepreneurs</h3>
+        <p>Put your best face on your startup's about page, pitch decks, and investor updates — without the photoshoot hassle.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Frequently asked questions</h2>
+      <p class="section-subtitle">Everything you need to know before getting started.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What kind of photos should I upload?</summary>
+        <div class="faq-answer">Upload 5–10 casual selfies with good natural lighting. Include a mix of angles — front-facing, slight profile, smiling and neutral expressions. Avoid heavy makeup, filters, or sunglasses. The more variety, the better your results.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How long does it take to get my headshots?</summary>
+        <div class="faq-answer">Very fast — most headshots are ready in under a minute. You'll receive a notification as soon as they're done. Complex styles may take slightly longer, but typically it's less than 60 seconds.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Are my photos private and secure?</summary>
+        <div class="faq-answer">Absolutely. Your uploaded photos are encrypted during transfer and processing. We never use your photos to train our AI models, and we never share them with third parties.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What if I don't like my headshots?</summary>
+        <div class="faq-answer">We offer a 7-day free refund. If you're not satisfied with your headshots, contact our support team and we'll issue a full refund — no questions asked. We're confident you'll love the results.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I use the headshots commercially?</summary>
+        <div class="faq-answer">Yes! You receive full commercial rights to all generated headshots. Use them on LinkedIn, your company website, email signatures, business cards, speaker profiles — anywhere you need a professional presence.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Can I use AI headshots on LinkedIn?</summary>
+        <div class="faq-answer">Absolutely! AI-generated headshots are perfect for LinkedIn. They look professional, natural, and indistinguishable from traditional photography. Thousands of professionals use them for their LinkedIn profile, and they're fully compliant with LinkedIn's photo guidelines.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How is this different from a traditional photographer?</summary>
+        <div class="faq-answer">You save 90%+ on cost, skip the scheduling and studio commute, and get dozens of variations instead of just a handful. For a fraction of the price of one professional session, you get hundreds of headshots with different styles and backdrops.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DOWNLOAD
+     ============================================ -->
+<section class="download" id="download">
+  <div class="container">
+    <div class="download-card">
+      <div class="section-label">Get the App</div>
+      <h2 class="section-title">Your professional headshot,<br>right from your iPhone</h2>
+      <p class="section-subtitle">Download the app, take a few selfies, and let AI create stunning professional headshots in minutes. Available on the App Store.</p>
+      <a href="#" class="btn btn-primary btn-lg" style="font-size:1.05rem;padding:14px 36px;gap:10px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+      </a>
+      <div class="qr-wrap">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://apps.apple.com/app/headshotpro&color=2563eb" alt="Scan to download on App Store" width="120" height="120">
+        <span>Scan to download</span>
+      </div>
+      <p class="download-note">iOS 16+ · Free download · In-app purchases available</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Headshot<span>Pro</span></div>
+        <div class="footer-bottom">Professional AI headshots for everyone.</div>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Mobile menu toggle */
+(function() {
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('.nav-links');
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', function() {
+    var wasOpen = nav.style.display === 'flex';
+    if (wasOpen) {
+      nav.style.display = '';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '64px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'rgba(255,255,255,0.95)';
+      nav.style.backdropFilter = 'blur(14px)';
+      nav.style.padding = '20px 24px';
+      nav.style.gap = '16px';
+      nav.style.borderBottom = '1px solid #f1f5f9';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>

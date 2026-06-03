@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Contact HeadshotPro — get in touch with our team.">
+<title>Contact — HeadshotPro</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #334155; background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.78); backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+.logo { font-size: 1.35rem; font-weight: 800; color: #0f172a; letter-spacing: -0.02em; }
+.logo span { color: #2563eb; }
+
+.page {
+  padding: 100px 0 80px;
+  min-height: calc(100vh - 160px);
+}
+
+.page h1 {
+  font-size: 2.2rem; font-weight: 800; color: #0f172a;
+  letter-spacing: -0.02em; margin-bottom: 12px; text-align: center;
+}
+.page > .container > .intro {
+  color: #64748b; font-size: 1.05rem; margin-bottom: 48px; text-align: center;
+}
+
+.contact-section {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  max-width: 800px; margin: 0 auto;
+}
+
+.contact-card {
+  padding: 36px; border-radius: 16px;
+  background: #f8fafc; border: 1px solid #e2e8f0;
+}
+
+.contact-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 0;
+}
+.contact-item + .contact-item { border-top: 1px solid #e2e8f0; }
+
+.contact-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: #eff6ff; display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.contact-item h3 { font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+.contact-item a, .contact-item span { font-size: 0.88rem; color: #64748b; }
+.contact-item a:hover { color: #2563eb; }
+
+/* Support FAQ */
+.support-faq h2 {
+  font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px;
+}
+.support-list { display: flex; flex-direction: column; gap: 10px; }
+
+.support-item {
+  border-radius: 10px; border: 1px solid #e2e8f0; background: #fff;
+}
+.support-item summary {
+  padding: 14px 18px; font-weight: 600; color: #0f172a; cursor: pointer;
+  font-size: 0.9rem; list-style: none; display: flex; justify-content: space-between;
+}
+.support-item summary::-webkit-details-marker { display: none; }
+.support-item summary::after { content: '+'; color: #94a3b8; font-size: 1.1rem; }
+.support-item[open] summary::after { content: '−'; color: #2563eb; }
+.support-item .answer { padding: 0 18px 14px; font-size: 0.85rem; color: #64748b; line-height: 1.65; }
+
+.footer {
+  background: #0f172a; color: #94a3b8; padding: 48px 0;
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+.footer-brand { font-size: 1.15rem; font-weight: 700; color: #fff; }
+.footer-brand span { color: #60a5fa; }
+.footer-links { display: flex; gap: 24px; }
+.footer-links a { font-size: 0.85rem; transition: color 0.15s; }
+.footer-links a:hover { color: #fff; }
+.footer-bottom { margin-top: 8px; font-size: 0.8rem; }
+
+@media (max-width: 768px) {
+  .contact-section { grid-template-columns: 1fr; gap: 32px; }
+  .page { padding: 100px 0 64px; min-height: 0; align-items: flex-start; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo">Headshot<span>Pro</span></a>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <h1>Get in touch</h1>
+    <p class="intro">Have questions or need help? Reach out — we'll get back to you quickly.</p>
+
+    <div class="contact-section">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:hello@headshotpro.ai">hello@headshotpro.ai</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <h3>Response Time</h3>
+            <span>Within 24 hours</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h3>Business Hours</h3>
+            <span>Monday – Friday, 9 AM – 6 PM (GMT+8)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="support-faq">
+        <h2>Support Questions</h2>
+        <div class="support-list">
+          <details class="support-item">
+            <summary>How do I get a refund?</summary>
+            <div class="answer">Simply email us within 7 days of your purchase. We'll process your refund within 3 business days — no questions asked.</div>
+          </details>
+          <details class="support-item">
+            <summary>My headshots didn't turn out well</summary>
+            <div class="answer">Try uploading photos with better lighting and more variety of angles. If you're still not satisfied, reach out and we'll help or issue a refund.</div>
+          </details>
+          <details class="support-item">
+            <summary>How do I delete my account?</summary>
+            <div class="answer">Send us an email from the account you want to delete, and we'll remove all your data within 48 hours.</div>
+          </details>
+          <details class="support-item">
+            <summary>Can I use this for my team?</summary>
+            <div class="answer">Yes! Contact us for team pricing and bulk options. We can help you get consistent headshots for your entire organization.</div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-brand">Headshot<span>Pro</span></div>
+        <div class="footer-bottom">Professional AI headshots for everyone.</div>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
