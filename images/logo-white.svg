@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 48" width="360" height="48">
+  <!-- App icon -->
+  <rect x="0" y="4" width="40" height="40" rx="10" fill="#fff" opacity="0.15"/>
+  <text x="20" y="34" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="28" font-weight="800" fill="#fff" text-anchor="middle" letter-spacing="-1">B</text>
+
+  <!-- Text: all white -->
+  <text x="52" y="35" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="22" font-weight="700" fill="#fff" letter-spacing="-0.5">BizShot<tspan font-weight="500" fill="rgba(255,255,255,0.7)" font-size="18">: AI Headshot Pro</tspan></text>
+</svg>
