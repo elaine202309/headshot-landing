@@ -452,14 +452,18 @@ ul { list-style: none; }
 }
 
 .download-icon {
-  margin-bottom: 28px;
+  margin-top: 32px;
 }
 
 .download-icon img {
-  width: 90px;
-  height: 90px;
-  border-radius: 22px;
-  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.download-icon .download-note {
+  margin-top: 12px;
 }
 
 .download-card .section-subtitle { margin: 0 auto 36px; }
@@ -977,9 +981,6 @@ ul { list-style: none; }
 <section class="download" id="download">
   <div class="container">
     <div class="download-card">
-      <div class="download-icon">
-        <img src="images/app-icon.png" alt="BizShot app" width="90" height="90">
-      </div>
       <div class="section-label">Get the App</div>
       <h2 class="section-title">Your professional headshot,<br>right from your iPhone</h2>
       <p class="section-subtitle">Download the app, take a few selfies, and let AI create stunning professional headshots in minutes. Available on the App Store.</p>
@@ -991,7 +992,10 @@ ul { list-style: none; }
         <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://apps.apple.com/app/headshotpro&color=2563eb" alt="Scan to download on App Store" width="120" height="120">
         <span>Scan to download</span>
       </div>
-      <p class="download-note">iOS 16+ · Free download · In-app purchases available</p>
+      <div class="download-icon">
+        <img src="images/app-icon.png" alt="BizShot app" width="64" height="64">
+        <p class="download-note">iOS 16+ · Free download · In-app purchases available</p>
+      </div>
     </div>
   </div>
 </section>
