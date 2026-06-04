@@ -637,17 +637,20 @@ ul { list-style: none; }
   gap: 24px;
 }
 
-.footer-app-icon img {
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+.footer-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
-.footer-brand img {
-  height: 36px;
-  width: auto;
-  opacity: 0.9;
+.footer-brand-wrap img {
+  flex-shrink: 0;
+}
+
+.footer-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
 }
 
 .footer-links {
@@ -1011,11 +1014,11 @@ ul { list-style: none; }
   <div class="container">
     <div class="footer-inner">
       <div class="footer-brand-wrap">
-        <div class="footer-brand"><img src="images/logo-white.svg" alt="BizShot" height="36"></div>
-        <div class="footer-bottom">Professional AI headshots for everyone.</div>
-      </div>
-      <div class="footer-app-icon">
-        <img src="images/app-icon.png" alt="BizShot app" width="56" height="56">
+        <img src="images/app-icon.png" alt="BizShot app" width="48" height="48" style="border-radius:12px;">
+        <div>
+          <div class="footer-brand">BizShot</div>
+          <div class="footer-bottom">Professional AI headshots for everyone.</div>
+        </div>
       </div>
       <div class="footer-links">
         <a href="privacy.html">Privacy Policy</a>
