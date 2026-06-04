@@ -128,12 +128,13 @@ ul { list-style: none; }
 }
 
 .logo {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #0a0a0a;
-  letter-spacing: -0.02em;
+  display: flex;
+  align-items: center;
 }
-.logo span { color: #2563eb; }
+.logo img {
+  height: 36px;
+  width: auto;
+}
 
 .nav { display: flex; align-items: center; gap: 36px; }
 
@@ -715,7 +716,7 @@ ul { list-style: none; }
      ============================================ -->
 <header class="header">
   <div class="container header-inner">
-    <a href="#" class="logo">Headshot<span>Pro</span></a>
+    <a href="#" class="logo"><img src="images/logo.svg" alt="BizShot" height="36"></a>
     <nav class="nav">
       <div class="nav-links">
         <a href="#how">How It Works</a>
