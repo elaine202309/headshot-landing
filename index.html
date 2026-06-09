@@ -130,10 +130,24 @@ ul { list-style: none; }
 .logo {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 .logo img {
-  height: 40px;
+  height: 36px;
   width: auto;
+  flex-shrink: 0;
+}
+.logo-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.logo-sub {
+  font-weight: 500;
+  color: #737373;
+  font-size: 0.88rem;
 }
 
 .nav { display: flex; align-items: center; gap: 36px; }
@@ -694,6 +708,7 @@ ul { list-style: none; }
   .nav-links { display: none; }
   .mobile-menu-btn { display: block; }
   .nav .btn-primary { display: none; }
+  .logo-sub { display: none; }
 
   .hero h1 { font-size: 2.4rem; }
   .hero p { font-size: 1.05rem; }
@@ -740,7 +755,7 @@ ul { list-style: none; }
      ============================================ -->
 <header class="header">
   <div class="container header-inner">
-    <a href="#" class="logo"><img src="images/logo.png" alt="BizShot" height="44"></a>
+    <a href="#" class="logo"><img src="images/logo.png" alt="BizShot" height="36"><span class="logo-text">BizShot<span class="logo-sub">: AI Headshot Pro</span></span></a>
     <nav class="nav">
       <div class="nav-links">
         <a href="#how">How It Works</a>
