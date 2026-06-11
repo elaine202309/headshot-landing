@@ -1,0 +1,1093 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8VR85HXVMW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8VR85HXVMW');</script>
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<meta name="google-site-verification" content="CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0">
+<meta name="description" content="BizShot è l'app AI per foto professionali. Trasforma i selfie in ritratti business di qualità studio in meno di un minuto. La migliore AI per foto LinkedIn e professionisti.">
+<title>BizShot: AI Headshot Pro — Generatore di Foto Professionali AI</title>
+<style>
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1e293b;
+  background: #fff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ========================================
+   UTILITY
+   ======================================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(79,70,229,0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #4f46e5;
+  border: 1.5px solid #4f46e5;
+}
+.btn-outline:hover {
+  background: #eef2ff;
+  border-color: #4f46e5;
+}
+
+.btn-white {
+  background: #fff;
+  color: #4f46e5;
+}
+.btn-white:hover {
+  background: #eef2ff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4f46e5;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: #6b7280;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 36px;
+  width: auto;
+  flex-shrink: 0;
+}
+.logo-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.logo-sub {
+  font-weight: 500;
+  color: #737373;
+  font-size: 0.88rem;
+}
+
+.nav { display: flex; align-items: center; gap: 24px; }
+
+.lang-switch {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #737373;
+  padding: 4px 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+.lang-switch:hover { color: #0a0a0a; border-color: #a3a3a3; }
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #525252;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: #4f46e5; }
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.mobile-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #0a0a0a;
+  margin: 5px 0;
+  border-radius: 1px;
+  transition: all 0.2s;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  padding: 160px 0 120px;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.hero-text { max-width: 560px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  border: 1px solid #c7d2fe;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-qr img {
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.hero-qr span {
+  font-size: 0.72rem;
+  color: #a3a3a3;
+}
+
+/* Hero visual — headshot grid */
+.hero-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  max-width: 420px;
+}
+
+.headshot-card {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease;
+  aspect-ratio: 3 / 4;
+  background: #f5f5f5;
+}
+.headshot-card:hover {
+  transform: scale(1.02);
+}
+
+.headshot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ========================================
+   SOCIAL PROOF
+   ======================================== */
+.social-proof {
+  padding: 56px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.03em;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: #737373;
+  margin-top: 6px;
+}
+.stat-divider {
+  width: 1px;
+  background: #e5e5e5;
+  align-self: stretch;
+}
+
+/* ========================================
+   HOW IT WORKS
+   ======================================== */
+.how { padding: 120px 0; background: #fff; }
+
+.how-header { text-align: center; margin-bottom: 72px; }
+.how-header .section-subtitle { margin: 0 auto; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  padding: 40px 32px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #e5e5e5;
+}
+.step:last-child::after { display: none; }
+
+.step-num {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #e5e5e5;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: color 0.25s ease;
+}
+
+.step:hover .step-num { color: #4f46e5; }
+
+.step h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #737373;
+  line-height: 1.65;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   FEATURES
+   ======================================== */
+.features { padding: 120px 0; background: #fafafa; }
+
+.features-header { text-align: center; margin-bottom: 72px; }
+.features-header .section-subtitle { margin: 0 auto; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feature {
+  padding: 40px 36px;
+  background: #fff;
+  transition: background 0.2s ease;
+}
+.feature:hover {
+  background: #fafafa;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 8px;
+}
+.feature p {
+  font-size: 0.92rem;
+  color: #737373;
+  line-height: 1.65;
+}
+
+/* ========================================
+   DOWNLOAD
+   ======================================== */
+.download { padding: 120px 0; background: #fafafa; }
+
+.download-card {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 64px 56px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.download-icon {
+  margin-top: 32px;
+}
+
+.download-icon img {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.download-icon .download-note {
+  margin-top: 12px;
+}
+
+.download-card .section-subtitle { margin: 0 auto 36px; }
+
+.download-note {
+  font-size: 0.82rem;
+  color: #a3a3a3;
+  margin-top: 16px;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 16px 40px;
+  gap: 10px;
+}
+
+.qr-wrap {
+  margin: 28px 0 0;
+}
+
+.qr-wrap img {
+  display: block;
+  margin: 0 auto 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.qr-wrap span {
+  font-size: 0.78rem;
+  color: #a3a3a3;
+}
+
+/* ========================================
+   USE CASES
+   ======================================== */
+.usecases { padding: 120px 0; background: #fff; }
+.usecases-header { text-align: center; margin-bottom: 64px; }
+.usecases-header .section-subtitle { margin: 0 auto; }
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.usecase {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
+  transition: transform 0.2s ease;
+}
+.usecase:hover {
+  transform: translateY(-4px);
+}
+
+.usecase-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.usecase-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.usecase-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+}
+
+.usecase h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 6px;
+}
+
+.usecase p {
+  font-size: 0.9rem;
+  color: #737373;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FAQ
+   ======================================== */
+.faq { padding: 120px 0; background: #fafafa; }
+.faq-header { text-align: center; margin-bottom: 56px; }
+.faq-header .section-subtitle { margin: 0 auto; }
+
+.faq-list {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-item {
+  background: #fff;
+  border: none;
+  transition: background 0.15s;
+}
+.faq-item:hover { background: #fafafa; }
+
+.faq-item summary {
+  padding: 22px 28px;
+  font-weight: 500;
+  color: #0a0a0a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 0.95rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #a3a3a3;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item[open] summary::after {
+  content: '−';
+  color: #4f46e5;
+}
+.faq-item[open] {
+  background: #fafafa;
+}
+
+.faq-item .faq-answer {
+  padding: 0 28px 22px;
+  font-size: 0.92rem;
+  color: #737373;
+  line-height: 1.7;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: #0a0a0a;
+  color: #737373;
+  padding: 56px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-brand-wrap img {
+  flex-shrink: 0;
+}
+
+.footer-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+.footer-links a {
+  font-size: 0.85rem;
+  color: #737373;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: #a78bfa; }
+
+.footer-bottom {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .container { padding: 0 32px; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .hero-text { max-width: 100%; text-align: center; }
+  .hero-actions { justify-content: center; }
+  .hero-visual {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .hero h1 { font-size: 2.8rem; }
+  .hero { padding: 140px 0 80px; }
+  .section-title { font-size: 2.4rem; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+  .nav .btn-primary { display: none; }
+  .logo-sub { display: none; }
+
+  .hero h1 { font-size: 2.4rem; }
+  .hero p { font-size: 1.05rem; }
+  .section-title { font-size: 2rem; }
+
+  .stats { gap: 36px; }
+  .stat-number { font-size: 1.6rem; }
+  .stat-divider { display: none; }
+
+  .steps { grid-template-columns: 1fr; gap: 0; }
+  .step::after { display: none; }
+  .step { padding: 28px 24px; }
+  .step-num { font-size: 3rem; }
+  .features-grid { grid-template-columns: 1fr; }
+  .usecases-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  .how, .features, .download, .faq, .usecases { padding: 80px 0; }
+  .hero { padding: 120px 0 64px; }
+
+  .download-card { padding: 48px 32px; }
+
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .hero-visual { max-width: 320px; gap: 8px; }
+  .hero-actions { flex-direction: column; gap: 20px; }
+  .hero-actions .btn { width: 100%; text-align: center; justify-content: center; }
+
+  .stats { flex-direction: column; gap: 24px; }
+
+  .usecases-grid { grid-template-columns: 1fr; }
+
+  .download-card { padding: 36px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo"><img src="../images/logo.png" alt="BizShot" height="36"><span class="logo-text">BizShot<span class="logo-sub">: AI Headshot Pro</span></span></a>
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="#how">Come Funziona</a>
+        <a href="#features">Funzionalità</a>
+        <a href="#download">Scarica</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="zh-cn/" class="lang-switch">中文</a>
+      <a href="#download" class="btn btn-primary">Scarica l'App</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge">Generatore AI di Foto Professionali</div>
+      <h1>Ritratti <span>Business di Qualità Studio</span> in Minuti</h1>
+      <p>Trasforma i tuoi selfie quotidiani in ritratti professionali impeccabili con la migliore app AI. Niente fotografo, niente studio, nessuna seccatura — solo splendide foto business di cui sarai orgoglioso.
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" style="font-size:1rem;padding:16px 40px;gap:10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Scarica su App Store
+        </a>
+        <div class="hero-qr">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://apps.apple.com/app/headshotpro&color=4f46e5" alt="Scansiona per scaricare" width="100" height="100">
+          <span>Scansiona per scaricare</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="headshot-card">
+        <img src="../images/headshot-1.jpg" alt="AI professional headshot example" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="../images/headshot-2.jpg" alt="AI professional headshot example" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="../images/headshot-3.jpg" alt="AI professional headshot example" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="../images/headshot-4.jpg" alt="AI professional headshot example" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SOCIAL PROOF
+     ============================================ -->
+<section class="social-proof">
+  <div class="container">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">200K+</div>
+        <div class="stat-label">Clienti Soddisfatti</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">15M+</div>
+        <div class="stat-label">Ritratti Generati</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">4.8 <span style="color:#f59e0b;font-size:0.8em;">★</span></div>
+        <div class="stat-label">Voto Medio</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">7 Giorni</div>
+        <div class="stat-label">Garanzia Soddisfatti o Rimborsati</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="how-header">
+      <div class="section-label">Come Funziona</div>
+      <h2 class="section-title">Tre semplici passi</h2>
+      <p class="section-subtitle"<p class="section-subtitle">Una foto, qualche scelta e l'IA fa il resto. Il tuo ritratto professionale è a portata di mano.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Carica una Foto</h3>
+        <p<p>Carica un selfie o ritratto nitido. Una buona illuminazione funziona meglio — l'IA si occupa del resto.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Scegli il Tuo Stile</h3>
+        <p<p>Scegli abbigliamento, sfondo e stile. Personalizza il look per il tuo settore e marchio personale.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Ottieni il Tuo Ritratto</h3>
+        <p<p>L'IA genera un ritratto professionale straordinario in meno di un minuto. Scarica in alta risoluzione, pronto all'uso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     USE CASES
+     ============================================ -->
+<section class="usecases">
+  <div class="container">
+    <div class="usecases-header">
+      <div class="section-label">Casi d'Uso</div>
+      <h2 class="section-title">Perfetto per ogni professionista</h2>
+      <p class="section-subtitle"<p class="section-subtitle">Dai candidati ai dirigenti, i ritratti IA ti aiutano a mostrare il tuo volto migliore.</p>
+    </div>
+    <div class="usecases-grid">
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-1.jpg" alt="Job Seekers"></div>
+        <h3>Candidati</h3>
+        <p<p>Fai un'ottima prima impressione con una foto LinkedIn curata che attira i recruiter.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-2.jpg" alt="Corporate Teams"></div>
+        <h3>Team Aziendali</h3>
+        <p<p>Ritratti professionali coerenti per tutto il team — nessuna pianificazione, nessun fotografo.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-3.jpg" alt="Freelancers"></div>
+        <h3>Liberi Professionisti</h3>
+        <p<p>Costruisci fiducia con i clienti grazie a un ritratto professionale su sito, proposte e profili.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-4.jpg" alt="Real Estate Agents"></div>
+        <h3>Agenti Immobiliari</h3>
+        <p<p>Costruisci fiducia con i clienti grazie a un ritratto professionale su sito, proposte e profili.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-5.jpg" alt="Executives &amp; Leaders"></div>
+        <h3>Dirigenti >Executives &amp; Leaders<amp; Leader</h3>
+        <p<p>Mostra autorevolezza e accessibilità. Un ritratto dirigenziale perfetto per profili aziendali, conferenze e stampa.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-6.jpg" alt="Entrepreneurs"></div>
+        <h3>Imprenditori</h3>
+        <p<p>Mostra il tuo volto migliore sulla pagina about della tua startup, nei pitch deck e negli aggiornamenti agli investitori.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FEATURES
+     ============================================ -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-label">Perché Sceglierci</div>
+      <h2 class="section-title">Pensato per i professionisti</h2>
+      <p class="section-subtitle"<p class="section-subtitle">La migliore app IA per ritratti professionali — tutto ciò che ti serve per la foto business perfetta, senza i soliti problemi.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">✨</div>
+        <h3>Qualità Studio</h3>
+        <p<p>La nostra IA è addestrata su migliaia di ritratti professionali. Risultati nitidi, naturali, indistinguibili da veri scatti in studio.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Rapidissimo</h3>
+        <p<p>Ottieni un ritratto professionale in meno di un minuto. Basta aspettare giorni per un fotografo.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌟</div>
+        <h3>Risultati Naturali</h3>
+        <p<p>La nostra IA produce ritratti autentici e naturali — non eccessivamente ritoccati o palesemente generati dall'IA.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Economico</h3>
+        <p>Save 90%+ compared to traditional headshot photography. One-time payment, no subscriptions, full ownership.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Privacy al Primo Posto</h3>
+        <p<p>Le tue foto sono crittografate durante trasferimento ed elaborazione. Mai usate per l'addestramento IA, mai condivise con terzi.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h3>Pieni Diritti</h3>
+        <p<p>Possiedi tutti i diritti commerciali sui tuoi ritratti generati. Usali dove vuoi, come vuoi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Domande frequenti</h2>
+      <p class="section-subtitle"<p class="section-subtitle">Tutto ciò che devi sapere prima di iniziare.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Che tipo di foto devo caricare?</summary>
+        <div class="faq-answer"<p>Carica un selfie nitido con buona illuminazione naturale. Evita trucco pesante, filtri o occhiali da sole. Più alta è la qualità, migliori sono i risultati.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Quanto tempo ci vuole?</summary>
+        <div class="faq-answer"<p>Molto veloce — la maggior parte dei ritratti è pronta in meno di un minuto. Riceverai una notifica appena completato.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Le mie foto sono private e sicure?</summary>
+        <div class="faq-answer"<p>Assolutamente sì. Le tue foto sono crittografate. Non le usiamo mai per addestrare i nostri modelli IA né le condividiamo con terzi.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Cosa succede se non mi piace?</summary>
+        <div class="faq-answer"<p>Offriamo una garanzia di rimborso di 7 giorni. Se non sei soddisfatto, contatta il supporto per un rimborso completo.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Posso usare i ritratti commercialmente?</summary>
+        <div class="faq-answer"<p>Sì! Ricevi tutti i diritti commerciali. Usali su LinkedIn, sito web, firme email, biglietti da visita — ovunque.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Posso usare i ritratti IA su LinkedIn?</summary>
+        <div class="faq-answer"<p>Certo! I ritratti IA sono perfetti per LinkedIn. Sembrano professionali e naturali. Migliaia di professionisti li usano già.</p></div>
+      </details>
+      <details class="faq-item">
+        <summary>Che differenza c'è con un fotografo tradizionale?</summary>
+        <div class="faq-answer"<p>Risparmi oltre il 90%, eviti appuntamenti e spostamenti e ottieni vari stili e sfondi. Per una frazione del prezzo di un servizio fotografico professionale.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DOWNLOAD
+     ============================================ -->
+<section class="download" id="download">
+  <div class="container">
+    <div class="download-card">
+      <div class="section-label">Scarica l'App</div>
+      <h2 class="section-title">Il tuo ritratto professionale,<br>direttamente dal tuo iPhone</h2>
+      <p class="section-subtitle"<p class="section-subtitle">Scarica l'app IA per ritratti più apprezzata. Scatta qualche selfie e ottieni foto business di qualità studio in meno di un minuto. Disponibile su App Store.</p>/p>
+      <a href="#" class="btn btn-primary btn-lg" style="font-size:1.05rem;padding:14px 36px;gap:10px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Scarica su App Store
+      </a>
+      <div class="qr-wrap">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://apps.apple.com/app/headshotpro&color=4f46e5" alt="Scansiona per scaricare on App Store" width="120" height="120">
+        <span>Scansiona per scaricare</span>
+      </div>
+      <p class="download-note">iOS 16+ · Download gratuito · Acquisti in-app disponibili</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand-wrap">
+        <img src="../images/app-icon.png" alt="BizShot app" width="48" height="48" style="border-radius:12px;">
+        <div>
+          <div class="footer-brand">BizShot</div>
+          <div class="footer-bottom">L'app AI per ritratti professionali business.</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Mobile menu toggle */
+(function() {
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('.nav-links');
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', function() {
+    var wasOpen = nav.style.display === 'flex';
+    if (wasOpen) {
+      nav.style.display = '';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '64px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'rgba(255,255,255,0.95)';
+      nav.style.backdropFilter = 'blur(14px)';
+      nav.style.padding = '20px 24px';
+      nav.style.gap = '16px';
+      nav.style.borderBottom = '1px solid #f1f5f9';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
