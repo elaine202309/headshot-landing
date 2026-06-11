@@ -158,15 +158,55 @@ ul { list-style: none; }
 .nav { display: flex; align-items: center; gap: 24px; }
 
 .lang-switch {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.lang-current {
   font-size: 0.8rem;
   font-weight: 500;
-  color: #737373;
-  padding: 4px 10px;
+  color: #525252;
+  padding: 6px 28px 6px 12px;
   border: 1px solid #e5e5e5;
-  border-radius: 4px;
-  transition: all 0.15s;
+  border-radius: 6px;
+  cursor: pointer;
+  background: #fff;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23737373'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  transition: border-color 0.15s;
 }
-.lang-switch:hover { color: #0a0a0a; border-color: #a3a3a3; }
+.lang-current:hover { border-color: #a3a3a3; }
+
+.lang-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 4px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 6px;
+  min-width: 130px;
+  display: none;
+  z-index: 200;
+}
+.lang-switch:hover .lang-dropdown { display: block; }
+
+.lang-dropdown a {
+  display: block;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  color: #525252;
+  border-radius: 4px;
+  text-decoration: none;
+}
+.lang-dropdown a:hover { background: #f5f5f5; color: #0a0a0a; }
+.lang-dropdown a.active { font-weight: 600; color: #4f46e5; }
 
 .nav-links {
   display: flex;
@@ -779,12 +819,17 @@ ul { list-style: none; }
         <a href="#download">Télécharger</a>
         <a href="#faq">FAQ</a>
       </div>
-      <a href="../zh-cn/" class="lang-switch">中文</a>
-      <a href="../de/" class="lang-switch">DE</a>
-      <a href="../fr/" class="lang-switch">FR</a>
-      <a href="../it/" class="lang-switch">IT</a>
-      <a href="../es/" class="lang-switch">ES</a>
-      <a href="../" class="lang-switch">EN</a>
+      <div class="lang-switch">
+        <span class="lang-current">FR</span>
+        <div class="lang-dropdown">
+          <a href="../zh-cn/">中文</a>
+          <a href="../de/">Deutsch</a>
+          <a href="../fr/" class="active">Français</a>
+          <a href="../it/">Italiano</a>
+          <a href="../es/">Español</a>
+          <a href="../">English</a>
+        </div>
+      </div>
       <a href="#download" class="btn btn-primary">Télécharger</a>
     </nav>
     <button class="mobile-menu-btn" aria-label="Menu">
