@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8VR85HXVMW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8VR85HXVMW');</script>
+<link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../images/favicon-180.png">
+<meta name="google-site-verification" content="CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0">
+<meta name="description" content="Contactez BizShot — prenez contact avec notre équipe.">
+<title>Contact — BizShot</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #334155; background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.85); backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 32px; border-radius: 6px; font-size: 0.95rem; font-weight: 600;
+  cursor: pointer; border: none; transition: all 0.2s ease; letter-spacing: -0.01em;
+}
+.btn-primary { background: #4f46e5; color: #fff; }
+.btn-primary:hover { background: #4338ca; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(79,70,229,0.3); }
+
+.logo {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.logo img { height: 36px; width: auto; flex-shrink: 0; }
+.logo-text { font-size: 1.15rem; font-weight: 700; color: #0a0a0a; letter-spacing: -0.02em; white-space: nowrap; }
+.logo-sub { font-weight: 500; color: #737373; font-size: 0.88rem; }
+
+.nav { display: flex; align-items: center; gap: 24px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { font-size: 0.88rem; font-weight: 500; color: #525252; transition: color 0.15s; text-decoration: none; }
+.nav-links a:hover { color: #4f46e5; }
+
+.mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.mobile-menu-btn span { display: block; width: 24px; height: 2px; background: #0a0a0a; margin: 5px 0; border-radius: 1px; }
+
+.page {
+  padding: 100px 0 80px;
+  min-height: calc(100vh - 160px);
+}
+
+.page h1 {
+  font-size: 2.2rem; font-weight: 800; color: #0f172a;
+  letter-spacing: -0.02em; margin-bottom: 12px; text-align: center;
+}
+.page > .container > .intro {
+  color: #64748b; font-size: 1.05rem; margin-bottom: 48px; text-align: center;
+}
+
+.contact-section {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  max-width: 800px; margin: 0 auto;
+}
+
+.contact-card {
+  padding: 36px; border-radius: 16px;
+  background: #f8fafc; border: 1px solid #e2e8f0;
+}
+
+.contact-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 0;
+}
+.contact-item + .contact-item { border-top: 1px solid #e2e8f0; }
+
+.contact-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: #eff6ff; display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.contact-item h3 { font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+.contact-item a, .contact-item span { font-size: 0.88rem; color: #64748b; }
+.contact-item a:hover { color: #2563eb; }
+
+/* Support FAQ */
+.support-faq h2 {
+  font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px;
+}
+.support-list { display: flex; flex-direction: column; gap: 10px; }
+
+.support-item {
+  border-radius: 10px; border: 1px solid #e2e8f0; background: #fff;
+}
+.support-item summary {
+  padding: 14px 18px; font-weight: 600; color: #0f172a; cursor: pointer;
+  font-size: 0.9rem; list-style: none; display: flex; justify-content: space-between;
+}
+.support-item summary::-webkit-details-marker { display: none; }
+.support-item summary::after { content: '+'; color: #94a3b8; font-size: 1.1rem; }
+.support-item[open] summary::after { content: '−'; color: #2563eb; }
+.support-item .answer { padding: 0 18px 14px; font-size: 0.85rem; color: #64748b; line-height: 1.65; }
+
+.footer {
+  background: #0a0a0a; color: #737373; padding: 56px 0;
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-brand-wrap { display: flex; align-items: center; gap: 14px; }
+.footer-brand-wrap img { flex-shrink: 0; }
+.footer-brand { font-size: 1rem; font-weight: 700; color: #fff; }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-size: 0.85rem; color: #737373; transition: color 0.15s; text-decoration: none; }
+.footer-links a:hover { color: #a78bfa; }
+.footer-bottom { margin-top: 8px; font-size: 0.8rem; }
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+  .nav .btn-primary { display: none; }
+  .logo-sub { display: none; }
+
+  .contact-section { grid-template-columns: 1fr; gap: 32px; }
+  .page { padding: 100px 0 64px; min-height: 0; align-items: flex-start; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="../images/logo.png" alt="BizShot" height="36"><span class="logo-text">BizShot<span class="logo-sub">: AI Headshot Pro</span></span></a>
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="index.html#how">Fonctionnement</a>
+        <a href="index.html#features">Fonctionnalités</a>
+        <a href="index.html#download">Télécharger</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <a href="index.html#download" class="btn btn-primary">Télécharger</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <h1>Nous contacter</h1>
+    <p class="intro">Des questions ou besoin d'aide ? Contactez-nous — nous vous répondrons rapidement.
+
+    <div class="contact-section">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h3>E-mail</h3>
+            <a href="mailto:support@mxcode.com">support@mxcode.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <h3>Délai de réponse</h3>
+            <span>Sous 24 heures</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h3>Heures d'ouverture</h3>
+            <span>Lundi – Vendredi, 9h – 18h (GMT+8)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="support-faq">
+        <h2>Questions fréquentes</h2>
+        <div class="support-list">
+          <details class="support-item">
+            <summary>Comment obtenir un remboursement ?</summary>
+            <div class="answer">Envoyez-nous un e-mail dans les 7 jours suivant votre achat. Nous traitons votre remboursement sous 3 jours ouvrés.
+          </details>
+          <details class="support-item">
+            <summary>Mes portraits ne sont pas réussis</summary>
+            <div class="answer">Essayez de télécharger des photos avec un meilleur éclairage et plus d'angles. Si toujours pas satisfait, contactez-nous pour une solution ou un remboursement.
+          </details>
+          <details class="support-item">
+            <summary>Comment supprimer mon compte ?</summary>
+            <div class="answer">Envoyez-nous un e-mail depuis le compte à supprimer. Nous effacerons toutes vos données sous 48 heures.
+          </details>
+          <details class="support-item">
+            <summary>Puis-je utiliser cela pour mon équipe ?</summary>
+            <div class="answer">Oui ! Contactez-nous pour les tarifs d'équipe. Nous pouvons vous aider à obtenir des portraits cohérents pour toute votre organisation.
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand-wrap">
+        <img src="../images/app-icon.png" alt="BizShot app" width="48" height="48" style="border-radius:12px;">
+        <div>
+          <div class="footer-brand">BizShot</div>
+          <div class="footer-bottom">L'app IA de portraits pour des photos d'affaires professionnelles.</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Confidentialité</a>
+        <a href="terms.html">Conditions</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('.nav-links');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function() {
+    var wasOpen = nav.style.display === 'flex';
+    if (wasOpen) {
+      nav.style.display = '';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '60px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'rgba(255,255,255,0.95)';
+      nav.style.backdropFilter = 'blur(20px)';
+      nav.style.padding = '20px 24px';
+      nav.style.gap = '16px';
+      nav.style.borderBottom = '1px solid #f0f0f0';
+    }
+  });
+})();
+</script>
+</body>
+</html>

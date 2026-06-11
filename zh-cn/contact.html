@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8VR85HXVMW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8VR85HXVMW');</script>
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon-180.png">
+<meta name="google-site-verification" content="CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0">
+<meta name="description" content="联系 BizShot — 与我们的团队取得联系。">
+<title>联系我们 — BizShot</title>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #334155; background: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+.container { max-width: 1280px; margin: 0 auto; padding: 0 32px; }
+
+.header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.85); backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.header-inner { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 14px 32px; border-radius: 6px; font-size: 0.95rem; font-weight: 600;
+  cursor: pointer; border: none; transition: all 0.2s ease; letter-spacing: -0.01em;
+}
+.btn-primary { background: #4f46e5; color: #fff; }
+.btn-primary:hover { background: #4338ca; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(79,70,229,0.3); }
+
+.logo {
+  display: flex; align-items: center; gap: 10px; text-decoration: none;
+}
+.logo img { height: 36px; width: auto; flex-shrink: 0; }
+.logo-text { font-size: 1.15rem; font-weight: 700; color: #0a0a0a; letter-spacing: -0.02em; white-space: nowrap; }
+.logo-sub { font-weight: 500; color: #737373; font-size: 0.88rem; }
+
+.nav { display: flex; align-items: center; gap: 24px; }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a { font-size: 0.88rem; font-weight: 500; color: #525252; transition: color 0.15s; text-decoration: none; }
+.nav-links a:hover { color: #4f46e5; }
+
+.mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
+.mobile-menu-btn span { display: block; width: 24px; height: 2px; background: #0a0a0a; margin: 5px 0; border-radius: 1px; }
+
+.page {
+  padding: 100px 0 80px;
+  min-height: calc(100vh - 160px);
+}
+
+.page h1 {
+  font-size: 2.2rem; font-weight: 800; color: #0f172a;
+  letter-spacing: -0.02em; margin-bottom: 12px; text-align: center;
+}
+.page > .container > .intro {
+  color: #64748b; font-size: 1.05rem; margin-bottom: 48px; text-align: center;
+}
+
+.contact-section {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px;
+  max-width: 800px; margin: 0 auto;
+}
+
+.contact-card {
+  padding: 36px; border-radius: 16px;
+  background: #f8fafc; border: 1px solid #e2e8f0;
+}
+
+.contact-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 0;
+}
+.contact-item + .contact-item { border-top: 1px solid #e2e8f0; }
+
+.contact-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: #eff6ff; display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; flex-shrink: 0;
+}
+.contact-item h3 { font-size: 0.92rem; font-weight: 700; color: #0f172a; margin-bottom: 2px; }
+.contact-item a, .contact-item span { font-size: 0.88rem; color: #64748b; }
+.contact-item a:hover { color: #2563eb; }
+
+/* Support FAQ */
+.support-faq h2 {
+  font-size: 1.3rem; font-weight: 700; color: #0f172a; margin-bottom: 20px;
+}
+.support-list { display: flex; flex-direction: column; gap: 10px; }
+
+.support-item {
+  border-radius: 10px; border: 1px solid #e2e8f0; background: #fff;
+}
+.support-item summary {
+  padding: 14px 18px; font-weight: 600; color: #0f172a; cursor: pointer;
+  font-size: 0.9rem; list-style: none; display: flex; justify-content: space-between;
+}
+.support-item summary::-webkit-details-marker { display: none; }
+.support-item summary::after { content: '+'; color: #94a3b8; font-size: 1.1rem; }
+.support-item[open] summary::after { content: '−'; color: #2563eb; }
+.support-item .answer { padding: 0 18px 14px; font-size: 0.85rem; color: #64748b; line-height: 1.65; }
+
+.footer {
+  background: #0a0a0a; color: #737373; padding: 56px 0;
+}
+.footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+.footer-brand-wrap { display: flex; align-items: center; gap: 14px; }
+.footer-brand-wrap img { flex-shrink: 0; }
+.footer-brand { font-size: 1rem; font-weight: 700; color: #fff; }
+.footer-links { display: flex; gap: 28px; }
+.footer-links a { font-size: 0.85rem; color: #737373; transition: color 0.15s; text-decoration: none; }
+.footer-links a:hover { color: #a78bfa; }
+.footer-bottom { margin-top: 8px; font-size: 0.8rem; }
+
+@media (max-width: 768px) {
+  .container { padding: 0 24px; }
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+  .nav .btn-primary { display: none; }
+  .logo-sub { display: none; }
+
+  .contact-section { grid-template-columns: 1fr; gap: 32px; }
+  .page { padding: 100px 0 64px; min-height: 0; align-items: flex-start; }
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><img src="../images/logo.png" alt="BizShot" height="36"><span class="logo-text">BizShot<span class="logo-sub">: AI Headshot Pro</span></span></a>
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="index.html#how">操作流程</a>
+        <a href="index.html#features">功能特点</a>
+        <a href="index.html#download">下载</a>
+        <a href="index.html#faq">常见问题</a>
+      </div>
+      <a href="index.html#download" class="btn btn-primary">获取 App</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="page">
+  <div class="container">
+    <h1>联系我们</h1>
+    <p class="intro">有任何问题或需要帮助？请随时联系我们。
+
+    <div class="contact-section">
+      <div class="contact-card">
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div>
+            <h3>邮箱</h3>
+            <a href="mailto:support@mxcode.com">support@mxcode.com</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💬</div>
+          <div>
+            <h3>回复时间</h3>
+            <span>24 小时内回复</span>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <h3>工作时间</h3>
+            <span>周一至周五，上午 9 点 – 下午 6 点 (GMT+8)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="support-faq">
+        <h2>常见支持问题</h2>
+        <div class="support-list">
+          <details class="support-item">
+            <summary>如何退款？</summary>
+            <div class="answer">购买后 7 天内发送邮件申请退款，我们将在 3 个工作日内处理 — 无需理由。
+          </details>
+          <details class="support-item">
+            <summary>头像效果不理想</summary>
+            <div class="answer">尝试在光线更好的环境下拍照，并提供更多角度。如仍不满意，联系我们帮助解决或退款。
+          </details>
+          <details class="support-item">
+            <summary>如何删除账户？</summary>
+            <div class="answer">用您的注册邮箱发送邮件申请删除，我们将在 48 小时内删除所有数据。
+          </details>
+          <details class="support-item">
+            <summary>团队可以使用吗？</summary>
+            <div class="answer">当然！联系我们获取团队定价和批量方案，为整个组织提供统一风格的头像。
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand-wrap">
+        <img src="../images/app-icon.png" alt="BizShot app" width="48" height="48" style="border-radius:12px;">
+        <div>
+          <div class="footer-brand">BizShot</div>
+          <div class="footer-bottom">AI 头像生成器 App，为专业商务照片而生。</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">隐私政策</a>
+        <a href="terms.html">服务条款</a>
+        <a href="contact.html">联系我们</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('.nav-links');
+  if (!btn || !nav) return;
+  btn.addEventListener('click', function() {
+    var wasOpen = nav.style.display === 'flex';
+    if (wasOpen) {
+      nav.style.display = '';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '60px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'rgba(255,255,255,0.95)';
+      nav.style.backdropFilter = 'blur(20px)';
+      nav.style.padding = '20px 24px';
+      nav.style.gap = '16px';
+      nav.style.borderBottom = '1px solid #f0f0f0';
+    }
+  });
+})();
+</script>
+</body>
+</html>
