@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8VR85HXVMW"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8VR85HXVMW');</script>
+<link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon-180.png">
+<meta name="google-site-verification" content="CRHi3cdgHMZ8cqNCuEHcq3Tx8T6GM1eVscF2Gkbzag0">
+<meta name="description" content="BizShot est l'application IA de photos professionnelles. Transformez vos selfies en portraits d'affaires de qualité studio en moins d'une minute. La meilleure IA de photo pour LinkedIn et les professionnels.">
+<title>BizShot: AI Headshot Pro — Générateur de Photos Professionnelles IA</title>
+<style>
+/* ========================================
+   RESET & BASE
+   ======================================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #1e293b;
+  background: #fff;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+
+/* ========================================
+   UTILITY
+   ======================================== */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.btn-primary {
+  background: #4f46e5;
+  color: #fff;
+}
+.btn-primary:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 24px rgba(79,70,229,0.3);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #4f46e5;
+  border: 1.5px solid #4f46e5;
+}
+.btn-outline:hover {
+  background: #eef2ff;
+  border-color: #4f46e5;
+}
+
+.btn-white {
+  background: #fff;
+  color: #4f46e5;
+}
+.btn-white:hover {
+  background: #eef2ff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.section-label {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #4f46e5;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.03em;
+  line-height: 1.12;
+  margin-bottom: 20px;
+}
+
+.section-subtitle {
+  font-size: 1.15rem;
+  color: #6b7280;
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo img {
+  height: 36px;
+  width: auto;
+  flex-shrink: 0;
+}
+.logo-text {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.logo-sub {
+  font-weight: 500;
+  color: #737373;
+  font-size: 0.88rem;
+}
+
+.nav { display: flex; align-items: center; gap: 24px; }
+
+.lang-switch {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #737373;
+  padding: 4px 10px;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+.lang-switch:hover { color: #0a0a0a; border-color: #a3a3a3; }
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #525252;
+  transition: color 0.15s;
+}
+.nav-links a:hover { color: #4f46e5; }
+
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.mobile-menu-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #0a0a0a;
+  margin: 5px 0;
+  border-radius: 1px;
+  transition: all 0.2s;
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  padding: 160px 0 120px;
+  background: #fafafa;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.hero-text { max-width: 560px; }
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #eef2ff;
+  color: #4f46e5;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 28px;
+  border: 1px solid #c7d2fe;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero h1 {
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+  margin-bottom: 24px;
+}
+.hero h1 span {
+  background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #6b7280;
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+
+.hero-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.hero-qr img {
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.hero-qr span {
+  font-size: 0.72rem;
+  color: #a3a3a3;
+}
+
+/* Hero visual — headshot grid */
+.hero-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 12px;
+  max-width: 420px;
+}
+
+.headshot-card {
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease;
+  aspect-ratio: 3 / 4;
+  background: #f5f5f5;
+}
+.headshot-card:hover {
+  transform: scale(1.02);
+}
+
+.headshot-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+/* ========================================
+   SOCIAL PROOF
+   ======================================== */
+.social-proof {
+  padding: 56px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  text-align: center;
+}
+.stat-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0a0a0a;
+  letter-spacing: -0.03em;
+}
+.stat-label {
+  font-size: 0.85rem;
+  color: #737373;
+  margin-top: 6px;
+}
+.stat-divider {
+  width: 1px;
+  background: #e5e5e5;
+  align-self: stretch;
+}
+
+/* ========================================
+   HOW IT WORKS
+   ======================================== */
+.how { padding: 120px 0; background: #fff; }
+
+.how-header { text-align: center; margin-bottom: 72px; }
+.how-header .section-subtitle { margin: 0 auto; }
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  padding: 40px 32px;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 60%;
+  width: 1px;
+  background: #e5e5e5;
+}
+.step:last-child::after { display: none; }
+
+.step-num {
+  display: inline-block;
+  font-size: 4rem;
+  font-weight: 700;
+  color: #e5e5e5;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 20px;
+  transition: color 0.25s ease;
+}
+
+.step:hover .step-num { color: #4f46e5; }
+
+.step h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 0.95rem;
+  color: #737373;
+  line-height: 1.65;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   FEATURES
+   ======================================== */
+.features { padding: 120px 0; background: #fafafa; }
+
+.features-header { text-align: center; margin-bottom: 72px; }
+.features-header .section-subtitle { margin: 0 auto; }
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.feature {
+  padding: 40px 36px;
+  background: #fff;
+  transition: background 0.2s ease;
+}
+.feature:hover {
+  background: #fafafa;
+}
+
+.feature-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+.feature h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 8px;
+}
+.feature p {
+  font-size: 0.92rem;
+  color: #737373;
+  line-height: 1.65;
+}
+
+/* ========================================
+   DOWNLOAD
+   ======================================== */
+.download { padding: 120px 0; background: #fafafa; }
+
+.download-card {
+  max-width: 520px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 64px 56px;
+  border-radius: 16px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+}
+
+.download-icon {
+  margin-top: 32px;
+}
+
+.download-icon img {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.download-icon .download-note {
+  margin-top: 12px;
+}
+
+.download-card .section-subtitle { margin: 0 auto 36px; }
+
+.download-note {
+  font-size: 0.82rem;
+  color: #a3a3a3;
+  margin-top: 16px;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 16px 40px;
+  gap: 10px;
+}
+
+.qr-wrap {
+  margin: 28px 0 0;
+}
+
+.qr-wrap img {
+  display: block;
+  margin: 0 auto 8px;
+  border-radius: 8px;
+  border: 1px solid #e5e5e5;
+}
+
+.qr-wrap span {
+  font-size: 0.78rem;
+  color: #a3a3a3;
+}
+
+/* ========================================
+   USE CASES
+   ======================================== */
+.usecases { padding: 120px 0; background: #fff; }
+.usecases-header { text-align: center; margin-bottom: 64px; }
+.usecases-header .section-subtitle { margin: 0 auto; }
+
+.usecases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.usecase {
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  border: none;
+  transition: transform 0.2s ease;
+}
+.usecase:hover {
+  transform: translateY(-4px);
+}
+
+.usecase-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.usecase-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.usecase-img::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.03);
+  pointer-events: none;
+}
+
+.usecase h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0a0a0a;
+  margin-bottom: 6px;
+}
+
+.usecase p {
+  font-size: 0.9rem;
+  color: #737373;
+  line-height: 1.6;
+}
+
+/* ========================================
+   FAQ
+   ======================================== */
+.faq { padding: 120px 0; background: #fafafa; }
+.faq-header { text-align: center; margin-bottom: 56px; }
+.faq-header .section-subtitle { margin: 0 auto; }
+
+.faq-list {
+  max-width: 680px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #e5e5e5;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.faq-item {
+  background: #fff;
+  border: none;
+  transition: background 0.15s;
+}
+.faq-item:hover { background: #fafafa; }
+
+.faq-item summary {
+  padding: 22px 28px;
+  font-weight: 500;
+  color: #0a0a0a;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-size: 0.95rem;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #a3a3a3;
+  transition: transform 0.2s;
+  flex-shrink: 0;
+  margin-left: 16px;
+}
+.faq-item[open] summary::after {
+  content: '−';
+  color: #4f46e5;
+}
+.faq-item[open] {
+  background: #fafafa;
+}
+
+.faq-item .faq-answer {
+  padding: 0 28px 22px;
+  font-size: 0.92rem;
+  color: #737373;
+  line-height: 1.7;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.footer {
+  background: #0a0a0a;
+  color: #737373;
+  padding: 56px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-brand-wrap {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-brand-wrap img {
+  flex-shrink: 0;
+}
+
+.footer-brand {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.footer-links {
+  display: flex;
+  gap: 28px;
+}
+.footer-links a {
+  font-size: 0.85rem;
+  color: #737373;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: #a78bfa; }
+
+.footer-bottom {
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 1024px) {
+  .container { padding: 0 32px; }
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .hero-text { max-width: 100%; text-align: center; }
+  .hero-actions { justify-content: center; }
+  .hero-visual {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .hero h1 { font-size: 2.8rem; }
+  .hero { padding: 140px 0 80px; }
+  .section-title { font-size: 2.4rem; }
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  .nav-links { display: none; }
+  .mobile-menu-btn { display: block; }
+  .nav .btn-primary { display: none; }
+  .logo-sub { display: none; }
+
+  .hero h1 { font-size: 2.4rem; }
+  .hero p { font-size: 1.05rem; }
+  .section-title { font-size: 2rem; }
+
+  .stats { gap: 36px; }
+  .stat-number { font-size: 1.6rem; }
+  .stat-divider { display: none; }
+
+  .steps { grid-template-columns: 1fr; gap: 0; }
+  .step::after { display: none; }
+  .step { padding: 28px 24px; }
+  .step-num { font-size: 3rem; }
+  .features-grid { grid-template-columns: 1fr; }
+  .usecases-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+
+  .how, .features, .download, .faq, .usecases { padding: 80px 0; }
+  .hero { padding: 120px 0 64px; }
+
+  .download-card { padding: 48px 32px; }
+
+  .footer-inner { flex-direction: column; text-align: center; }
+  .footer-links { justify-content: center; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 2rem; }
+  .hero-visual { max-width: 320px; gap: 8px; }
+  .hero-actions { flex-direction: column; gap: 20px; }
+  .hero-actions .btn { width: 100%; text-align: center; justify-content: center; }
+
+  .stats { flex-direction: column; gap: 24px; }
+
+  .usecases-grid { grid-template-columns: 1fr; }
+
+  .download-card { padding: 36px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============================================
+     HEADER
+     ============================================ -->
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo"><img src="../images/logo.png" alt="BizShot" height="36"><span class="logo-text">BizShot<span class="logo-sub">: AI Headshot Pro</span></span></a>
+    <nav class="nav">
+      <div class="nav-links">
+        <a href="#how">Fonctionnement</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#download">Télécharger</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a href="../zh-cn/" class="lang-switch">中文</a>
+      <a href="../de/" class="lang-switch">DE</a>
+      <a href="../" class="lang-switch">EN</a>
+      <a href="#download" class="btn btn-primary">Télécharger</a>
+    </nav>
+    <button class="mobile-menu-btn" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-badge">Générateur IA de Photos Professionnelles</div>
+      <h1>Des <span>Portraits d'Affaires</span> en Qualité Studio</h1>
+      <p>Transformez vos selfies du quotidien en portraits professionnels impeccables avec la meilleure app IA de photo. Sans photographe, sans studio, sans tracas — des photos pro dont vous serez fier.</p>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg" style="font-size:1rem;padding:16px 40px;gap:10px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          Télécharger sur l'App Store
+        </a>
+        <div class="hero-qr">
+          <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=https://apps.apple.com/app/headshotpro&color=4f46e5" alt="Scanner pour télécharger" width="100" height="100">
+          <span>Scanner pour télécharger</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="headshot-card">
+        <img src="../images/headshot-1.jpg" alt="Exemple de portrait professionnel IA" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="../images/headshot-2.jpg" alt="Exemple de portrait professionnel IA" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="../images/headshot-3.jpg" alt="Exemple de portrait professionnel IA" loading="eager">
+      </div>
+      <div class="headshot-card">
+        <img src="../images/headshot-4.jpg" alt="Exemple de portrait professionnel IA" loading="eager">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SOCIAL PROOF
+     ============================================ -->
+<section class="social-proof">
+  <div class="container">
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-number">200K+</div>
+        <div class="stat-label">Clients Satisfaits</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">15M+</div>
+        <div class="stat-label">Portraits Générés</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">4.8 <span style="color:#f59e0b;font-size:0.8em;">★</span></div>
+        <div class="stat-label">Note Moyenne</div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat">
+        <div class="stat-number">7 Jours</div>
+        <div class="stat-label">Satisfait ou Remboursé</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     HOW IT WORKS
+     ============================================ -->
+<section class="how" id="how">
+  <div class="container">
+    <div class="how-header">
+      <div class="section-label">Fonctionnement</div>
+      <h2 class="section-title">Trois étapes simples</h2>
+      <p class="section-subtitle">Une photo, quelques choix, et l'IA fait le reste. Votre portrait professionnel est à portée de main.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Téléchargez une Photo</h3>
+        <p>Importez simplement un selfie ou portrait net. Un bon éclairage donne les meilleurs résultats — l'IA s'occupe du reste.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Choisissez Votre Style</h3>
+        <p>Sélectionnez votre tenue, arrière-plan et style. Adaptez le look à votre secteur et à votre marque personnelle.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Obtenez Votre Portrait</h3>
+        <p>L'IA génère un portrait professionnel époustouflant en moins d'une minute. Téléchargez en haute résolution, prêt à l'emploi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     USE CASES
+     ============================================ -->
+<section class="usecases">
+  <div class="container">
+    <div class="usecases-header">
+      <div class="section-label">Cas d'Usage</div>
+      <h2 class="section-title">Parfait pour chaque professionnel</h2>
+      <p class="section-subtitle">Des chercheurs d'emploi aux dirigeants, les portraits IA vous aident à présenter votre meilleur visage.</p>
+    </div>
+    <div class="usecases-grid">
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-1.jpg" alt="Job Seekers"></div>
+        <h3>Chercheurs d'Emploi</h3>
+        <p>Faites forte impression avec une photo LinkedIn impeccable qui attire l'attention des recruteurs.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-2.jpg" alt="Équipes Corporate"></div>
+        <h3>Équipes Corporate</h3>
+        <p>Des portraits professionnels cohérents pour toute votre équipe — sans rendez-vous, sans photographe.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-3.jpg" alt="Freelances"></div>
+        <h3>Freelances</h3>
+        <p>Gagnez la confiance de vos clients avec un portrait pro sur votre site, vos propositions et vos profils.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-4.jpg" alt="Agents Immobiliers"></div>
+        <h3>Agents Immobiliers</h3>
+        <p>Inspirez confiance instantanément. Un portrait soigné sur vos annonces et cartes vous démarque de la concurrence.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-5.jpg" alt="Dirigeants"></div>
+        <h3>Dirigeants</h3>
+        <p>Incarnez autorité et accessibilité. Un portrait de direction parfait pour les conseils, conférences et presse.</p>
+      </div>
+      <div class="usecase">
+        <div class="usecase-img"><img src="../images/usecase-6.jpg" alt="Entrepreneurs"></div>
+        <h3>Entrepreneurs</h3>
+        <p>Présentez votre meilleur visage sur votre page "À propos", vos pitch decks et vos communications investisseurs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FEATURES
+     ============================================ -->
+<section class="features" id="features">
+  <div class="container">
+    <div class="features-header">
+      <div class="section-label">Pourquoi Nous Choisir</div>
+      <h2 class="section-title">Conçu pour les professionnels</h2>
+      <p class="section-subtitle">L'application IA ultime pour portraits professionnels — tout ce dont vous avez besoin pour la photo d'affaires parfaite, sans les contraintes habituelles.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">✨</div>
+        <h3>Qualité Studio</h3>
+        <p>Notre IA est entraînée sur des milliers de portraits professionnels. Résultats nets, naturels, indiscernables de vraies photos de studio.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⚡</div>
+        <h3>Ultra Rapide</h3>
+        <p>Recevez un portrait professionnel en moins d'une minute. Fini l'attente de plusieurs jours pour un photographe.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🌟</div>
+        <h3>Résultat Naturel</h3>
+        <p>Notre IA produit des portraits authentiques et naturels — sans retouches excessives ni aspect artificiel.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">💰</div>
+        <h3>Économique</h3>
+        <p>Économisez plus de 90 % par rapport à la photographie traditionnelle. Paiement unique, tous droits inclus.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🔒</div>
+        <h3>Confidentialité</h3>
+        <p>Vos photos sont chiffrées lors du transfert et du traitement. Jamais utilisées pour l'entraînement IA, jamais partagées.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">🎯</div>
+        <h3>Droits Complets</h3>
+        <p>Vous possédez tous les droits commerciaux sur vos portraits générés. Utilisez-les où vous voulez, comme vous voulez.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ
+     ============================================ -->
+<section class="faq" id="faq">
+  <div class="container">
+    <div class="faq-header">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title">Questions fréquentes</h2>
+      <p class="section-subtitle">Tout ce que vous devez savoir avant de commencer.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Quel type de photo dois-je télécharger ?</summary>
+        <div class="faq-answer">Importez un selfie ou portrait net avec un bon éclairage naturel. Évitez le maquillage prononcé, les filtres ou les lunettes de soleil. Plus la qualité est élevée, meilleurs seront les résultats.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Combien de temps pour recevoir mon portrait ?</summary>
+        <div class="faq-answer">Très rapide — la plupart des portraits sont prêts en moins d'une minute. Vous recevez une notification dès que c'est terminé.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Mes photos sont-elles privées et sécurisées ?</summary>
+        <div class="faq-answer">Absolument. Vos photos sont chiffrées pendant le transfert et le traitement. Nous ne les utilisons jamais pour entraîner nos modèles IA et ne les partageons jamais avec des tiers.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Et si je n'aime pas le résultat ?</summary>
+        <div class="faq-answer">Nous offrons une garantie satisfait ou remboursé de 7 jours. Si vous n'êtes pas satisfait, contactez notre support et nous vous rembourserons intégralement — sans poser de questions.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je utiliser les portraits commercialement ?</summary>
+        <div class="faq-answer">Oui ! Vous recevez tous les droits commerciaux sur vos portraits générés. Utilisez-les sur LinkedIn, votre site web, signatures email, cartes de visite, profils de conférencier — partout.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Puis-je utiliser les portraits IA sur LinkedIn ?</summary>
+        <div class="faq-answer">Absolument ! Les portraits générés par IA sont parfaits pour LinkedIn. Ils ont l'air professionnels et naturels. Des milliers de professionnels les utilisent, en totale conformité avec les règles de LinkedIn.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Quelle différence avec un photographe traditionnel ?</summary>
+        <div class="faq-answer">Vous économisez plus de 90 %, évitez les rendez-vous et les déplacements, et obtenez divers styles et arrière-plans. Pour une fraction du prix d'une séance pro, vous recevez des portraits d'affaires de haute qualité.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     DOWNLOAD
+     ============================================ -->
+<section class="download" id="download">
+  <div class="container">
+    <div class="download-card">
+      <div class="section-label">Télécharger l'App</div>
+      <h2 class="section-title">Votre portrait professionnel,<br>directement depuis votre iPhone</h2>
+      <p class="section-subtitle">Téléchargez l'app IA de portraits la mieux notée. Prenez quelques selfies et obtenez des photos pro de qualité studio en moins d'une minute. Disponible sur l'App Store.</p>
+      <a href="#" class="btn btn-primary btn-lg" style="font-size:1.05rem;padding:14px 36px;gap:10px;">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Télécharger sur l'App Store
+      </a>
+      <div class="qr-wrap">
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://apps.apple.com/app/headshotpro&color=4f46e5" alt="Scanner pour télécharger" width="120" height="120">
+        <span>Scanner pour télécharger</span>
+      </div>
+      <p class="download-note">iOS 16+ · Gratuit · Achats intégrés disponibles</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand-wrap">
+        <img src="../images/app-icon.png" alt="BizShot app" width="48" height="48" style="border-radius:12px;">
+        <div>
+          <div class="footer-brand">BizShot</div>
+          <div class="footer-bottom">L'app IA de portraits pour des photos d'affaires professionnelles.</div>
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* Mobile menu toggle */
+(function() {
+  var btn = document.querySelector('.mobile-menu-btn');
+  var nav = document.querySelector('.nav-links');
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', function() {
+    var wasOpen = nav.style.display === 'flex';
+    if (wasOpen) {
+      nav.style.display = '';
+    } else {
+      nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.position = 'absolute';
+      nav.style.top = '64px';
+      nav.style.left = '0';
+      nav.style.right = '0';
+      nav.style.background = 'rgba(255,255,255,0.95)';
+      nav.style.backdropFilter = 'blur(14px)';
+      nav.style.padding = '20px 24px';
+      nav.style.gap = '16px';
+      nav.style.borderBottom = '1px solid #f1f5f9';
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
