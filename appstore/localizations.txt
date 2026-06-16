@@ -102,7 +102,7 @@ BizShot 是一款 AI 驱动的专业头像 App，只需一张自拍，即可在�
 条款和条件：https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 
 Keywords:
-headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,头像生成,专业头像,求职头像,商务头像,AI头像
+专业头像,AI头像生成,商务头像,LinkedIn头像,求职头像,职业照,证件照,人像生成,面试,简历,高管,企业,摄影师替代,影棚级人像,一寸照
 
 
 ================================================================================
@@ -153,7 +153,7 @@ Datenschutzerklärung: https://bizshot.mxcode.com/privacy.html
 AGB: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 
 Keywords:
-headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,Bewerbungsfoto,Porträt,Visitenkarte,Profilbild,Führungskraft
+Bewerbungsfoto,KI-Porträt,Business-Foto,LinkedIn-Profilbild,Visitenkarte,Führungskraft,Foto-Generator,Studioqualität,Porträt-App,Jobsuche,Team-Foto,Manager
 
 
 ================================================================================
@@ -204,7 +204,7 @@ Confidentialité : https://bizshot.mxcode.com/privacy.html
 Conditions : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 
 Keywords:
-headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,portrait,photo pro,entretien,CV,corporate
+portrait professionnel,photo IA,photo business,photo LinkedIn,CV,entretien,portrait studio,générateur photo,cadre,dirigeant,indépendant,carte de visite
 
 
 ================================================================================
@@ -255,7 +255,7 @@ Privacy: https://bizshot.mxcode.com/privacy.html
 Termini: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 
 Keywords:
-headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,ritratto,foto professionale,curriculum,vitello,dirigente
+ritratto professionale,foto IA,foto business,foto LinkedIn,curriculum,colloquio,ritratto studio,generatore foto,dirigente,imprenditore,carta da visita
 
 
 ================================================================================
@@ -306,4 +306,4 @@ Privacidad: https://bizshot.mxcode.com/privacy.html
 Términos: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
 
 Keywords:
-headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,retrato,foto profesional,currículum,ejecutivo,corporativo
+retrato profesional,foto IA,foto ejecutiva,foto LinkedIn,currículum,entrevista,retrato estudio,generador fotos,directivo,emprendedor,tarjeta visita
