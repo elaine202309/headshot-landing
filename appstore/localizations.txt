@@ -1,0 +1,309 @@
+================================================================================
+APP STORE LOCALIZATIONS — BizShot: AI Headshot Pro
+================================================================================
+
+
+================================================================================
+ENGLISH (Primary)
+================================================================================
+
+Promotional Text:
+AI professional headshots in under a minute. Get studio-quality business portraits from a single selfie. Download BizShot and try it today.
+
+Description:
+BizShot is the AI-powered professional headshot app that turns a single selfie into stunning, studio-quality business portraits in under a minute. No photographer, no studio, no hassle.
+
+WHY BIZSHOT?
+• Studio-Quality Results
+  Trained on thousands of professional portraits. Crisp, natural, indistinguishable from real studio photography — at a fraction of the cost.
+• Lightning Fast
+  Most headshots are ready in under a minute. No waiting days for a photographer to shoot, edit, and deliver.
+• Built for Business
+  Whether you're a job seeker updating your LinkedIn, a corporate team needing consistent headshots, or an executive refreshing your board profile — BizShot delivers professional business headshots you'll be proud to share.
+• Privacy First
+  Your photos are encrypted during transfer and processing. Never used for AI training, never shared with third parties.
+• Full Commercial Rights
+  You own all your generated headshots. Use them on LinkedIn, company websites, email signatures, business cards — anywhere.
+
+HOW IT WORKS
+1. Upload a single clear selfie or portrait photo
+2. Choose your clothing, backdrop, and style
+3. AI generates a professional headshot in under a minute — download in high resolution
+
+PERFECT FOR
+• Job Seekers — Stand out on LinkedIn with a polished profile photo
+• Corporate Teams — Consistent professional headshots for your entire organization
+• Freelancers — Build trust with a professional portrait on your website and proposals
+• Real Estate Agents — Make a great first impression on listings and business cards
+• Executives & Leaders — Board profiles, speaking engagements, press photos
+• Entrepreneurs — About pages, pitch decks, investor updates
+
+Join thousands of professionals who trust BizShot as their go-to AI professional headshot generator. Download today.
+
+PRICING — CREDITS SYSTEM
+Every headshot costs 5 credits. 4K ultra-high-resolution exports cost 10 credits.
+• 50 Credits — $4.9 (10 headshots)
+• 200 Credits — $9.9 (40 headshots)
+• 1,000 Credits — $29 (200 headshots)
+Credits never expire. One-time purchase, no subscriptions.
+
+Privacy Policy: https://bizshot.mxcode.com/privacy.html
+Terms and Conditions: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Keywords:
+headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator
+
+
+================================================================================
+中文简体 (Simplified Chinese)
+================================================================================
+
+Promotional Text:
+AI 专业头像，一分钟内生成。一张自拍即可获得影棚级商务人像。立即下载 BizShot 免费体验。
+
+Description:
+BizShot 是一款 AI 驱动的专业头像 App，只需一张自拍，即可在一分钟内生成令人惊艳的影棚级商务人像。无需摄影师，无需影棚，轻松搞定。
+
+为什么选择 BIZSHOT？
+• 影棚级品质
+  基于数千张专业人像训练而成。清晰自然，与真实影棚拍摄无异——成本仅为其零头。
+• 闪电般快速
+  大多数头像在一分钟内即可生成。无需等待摄影师拍摄、修图、交付，一等就是好几天。
+• 为商务而生
+  无论您是正在更新 LinkedIn 的求职者，需要统一风格头像的企业团队，还是想要更新董事会形象的高管——BizShot 都能为您生成引以为豪的专业商务头像。
+• 隐私优先
+  您的照片在传输和处理过程中全程加密。绝不用作 AI 训练，绝不与第三方共享。
+• 完整商业版权
+  您拥有所有生成头像的全部商业权利。可在 LinkedIn、公司网站、邮件签名、名片等任何场合使用。
+
+使用流程
+1. 上传一张清晰的自拍或人像照片
+2. 选择您的服装、背景和风格
+3. AI 在一分钟内生成专业头像——高清下载
+
+适用人群
+• 求职者——用精致的 LinkedIn 头像脱颖而出
+• 企业团队——为整个团队提供风格统一的专业头像
+• 自由职业者——通过网站和提案上的专业形象赢得客户信任
+• 房产经纪人——在房源列表和名片上留下出色的第一印象
+• 高管与领导者——董事会简介、演讲活动、媒体照片
+• 创业者——公司介绍页、融资演示、投资人更新
+
+成千上万的专业人士已选择 BizShot 作为他们的首选 AI 专业头像生成器。立即下载！
+
+定价 — 积分系统
+每张头像消耗 5 积分。4K 超高清导出消耗 10 积分。
+• 50 积分 — $4.9（10 张头像）
+• 200 积分 — $9.9（40 张头像）
+• 1,000 积分 — $29（200 张头像）
+积分永不过期。一次性购买，无订阅。
+
+隐私政策：https://bizshot.mxcode.com/privacy.html
+条款和条件：https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Keywords:
+headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,头像生成,专业头像,求职头像,商务头像,AI头像
+
+
+================================================================================
+Deutsch (German)
+================================================================================
+
+Promotional Text:
+KI-Bewerbungsfotos in unter einer Minute. Studioqualität-Business-Porträts aus einem einzigen Selfie. Jetzt BizShot laden und kostenlos testen.
+
+Description:
+BizShot ist die KI-gestützte App für professionelle Bewerbungsfotos, die ein einziges Selfie in unter einer Minute in beeindruckende Business-Porträts in Studioqualität verwandelt. Kein Fotograf, kein Studio, kein Aufwand.
+
+WARUM BIZSHOT?
+• Studioqualität
+  Trainiert mit Tausenden professionellen Porträts. Gestochen scharf, natürlich, von echten Studioaufnahmen nicht zu unterscheiden — zu einem Bruchteil der Kosten.
+• Blitzschnell
+  Die meisten Bewerbungsfotos sind in unter einer Minute fertig. Kein tagelanges Warten auf Fotograf, Bearbeitung und Lieferung.
+• Fürs Business gemacht
+  Ob Sie als Jobsuchender Ihr LinkedIn-Profil aktualisieren, als Unternehmensteam einheitliche Bewerbungsfotos benötigen oder als Führungskraft Ihr Board-Profil auffrischen — BizShot liefert professionelle Business-Porträts, auf die Sie stolz sein werden.
+• Datenschutz first
+  Ihre Fotos werden bei Übertragung und Verarbeitung verschlüsselt. Niemals für KI-Training verwendet, niemals an Dritte weitergegeben.
+• Volle Nutzungsrechte
+  Sie besitzen alle Nutzungsrechte an Ihren generierten Bewerbungsfotos. Verwenden Sie sie auf LinkedIn, Firmenwebsites, in E-Mail-Signaturen, auf Visitenkarten — überall.
+
+SO FUNKTIONIERT'S
+1. Laden Sie ein klares Selfie oder Porträtfoto hoch
+2. Wählen Sie Kleidung, Hintergrund und Stil
+3. Die KI erstellt in unter einer Minute ein professionelles Bewerbungsfoto — Download in hoher Auflösung
+
+PERFEKT FÜR
+• Jobsuchende — Heben Sie sich auf LinkedIn mit einem perfekten Profilfoto ab
+• Firmen-Teams — Einheitliche professionelle Bewerbungsfotos für Ihre gesamte Organisation
+• Freiberufler — Bauen Sie Vertrauen auf mit einem professionellen Porträt auf Ihrer Website und in Angeboten
+• Immobilienmakler — Beeindrucken Sie auf Exposés und Visitenkarten
+• Führungskräfte — Board-Profile, Vorträge, Pressefotos
+• Gründer — About-Seiten, Pitch-Decks, Investoren-Updates
+
+Tausende Profis vertrauen auf BizShot als ihren KI-Bewerbungsfoto-Generator. Jetzt herunterladen.
+
+PREISE — CREDITSYSTEM
+Jedes Bewerbungsfoto kostet 5 Credits. 4K-Ultra-HD-Export kostet 10 Credits.
+• 50 Credits — 4,90 $ (10 Bewerbungsfotos)
+• 200 Credits — 9,90 $ (40 Bewerbungsfotos)
+• 1.000 Credits — 29 $ (200 Bewerbungsfotos)
+Credits verfallen nie. Einmaliger Kauf, keine Abos.
+
+Datenschutzerklärung: https://bizshot.mxcode.com/privacy.html
+AGB: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Keywords:
+headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,Bewerbungsfoto,Porträt,Visitenkarte,Profilbild,Führungskraft
+
+
+================================================================================
+Français (French)
+================================================================================
+
+Promotional Text:
+Portraits professionnels IA en moins d'une minute. Des photos d'affaires de qualité studio à partir d'un seul selfie. Téléchargez BizShot et essayez gratuitement.
+
+Description:
+BizShot est l'application de portraits professionnels alimentée par IA qui transforme un seul selfie en superbes photos d'affaires de qualité studio en moins d'une minute. Sans photographe, sans studio, sans tracas.
+
+POURQUOI BIZSHOT ?
+• Qualité Studio
+  Entraînée sur des milliers de portraits professionnels. Des résultats nets, naturels, indiscernables de la vraie photographie de studio — pour une fraction du prix.
+• Ultra Rapide
+  La plupart des portraits sont prêts en moins d'une minute. Fini l'attente de plusieurs jours pour un photographe.
+• Pensé pour les Professionnels
+  Que vous soyez un chercheur d'emploi mettant à jour votre LinkedIn, une équipe corporate ayant besoin de portraits cohérents, ou un dirigeant rafraîchissant son profil — BizShot vous livre des portraits d'affaires dont vous serez fier.
+• Confidentialité Avant Tout
+  Vos photos sont chiffrées pendant le transfert et le traitement. Jamais utilisées pour l'entraînement de l'IA, jamais partagées avec des tiers.
+• Droits Commerciaux Complets
+  Vous possédez tous les droits sur vos portraits générés. Utilisez-les sur LinkedIn, votre site web, vos signatures email, vos cartes de visite — partout.
+
+FONCTIONNEMENT
+1. Téléchargez un seul selfie ou portrait net
+2. Choisissez votre tenue, votre arrière-plan et votre style
+3. L'IA génère un portrait professionnel en moins d'une minute — téléchargement en haute résolution
+
+PARFAIT POUR
+• Chercheurs d'Emploi — Démarquez-vous sur LinkedIn avec une photo de profil impeccable
+• Équipes Corporate — Des portraits professionnels cohérents pour toute votre organisation
+• Freelances — Gagnez la confiance de vos clients avec un portrait pro sur votre site et vos propositions
+• Agents Immobiliers — Faites bonne impression sur vos annonces et cartes de visite
+• Dirigeants — Profils de conseil, conférences, photos de presse
+• Entrepreneurs — Pages "À propos", pitch decks, communications investisseurs
+
+Rejoignez les milliers de professionnels qui font confiance à BizShot. Téléchargez aujourd'hui.
+
+TARIFS — SYSTÈME DE CRÉDITS
+Chaque portrait coûte 5 crédits. L'export 4K ultra-haute résolution coûte 10 crédits.
+• 50 Crédits — 4,90 $ (10 portraits)
+• 200 Crédits — 9,90 $ (40 portraits)
+• 1 000 Crédits — 29 $ (200 portraits)
+Les crédits n'expirent jamais. Achat unique, sans abonnement.
+
+Confidentialité : https://bizshot.mxcode.com/privacy.html
+Conditions : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Keywords:
+headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,portrait,photo pro,entretien,CV,corporate
+
+
+================================================================================
+Italiano (Italian)
+================================================================================
+
+Promotional Text:
+Ritratti professionali AI in meno di un minuto. Foto business di qualità studio da un solo selfie. Scarica BizShot e provalo gratis.
+
+Description:
+BizShot è l'app di ritratti professionali basata su IA che trasforma un singolo selfie in splendidi ritratti business di qualità studio in meno di un minuto. Niente fotografo, niente studio, nessuna seccatura.
+
+PERCHÉ BIZSHOT?
+• Qualità Studio
+  Addestrata su migliaia di ritratti professionali. Risultati nitidi, naturali, indistinguibili dalla vera fotografia in studio — a una frazione del costo.
+• Rapidissimo
+  La maggior parte dei ritratti è pronta in meno di un minuto. Basta aspettare giorni per un fotografo.
+• Pensato per il Business
+  Che tu sia un candidato che aggiorna LinkedIn, un team aziendale che necessita di ritratti uniformi o un dirigente che rinnova il proprio profilo — BizShot ti offre ritratti business professionali di cui sarai orgoglioso.
+• Privacy al Primo Posto
+  Le tue foto sono crittografate durante trasferimento ed elaborazione. Mai usate per l'addestramento dell'IA, mai condivise con terzi.
+• Pieni Diritti Commerciali
+  Possiedi tutti i diritti commerciali sui tuoi ritratti generati. Usali su LinkedIn, sito web aziendale, firme email, biglietti da visita — ovunque.
+
+COME FUNZIONA
+1. Carica un singolo selfie o ritratto nitido
+2. Scegli abbigliamento, sfondo e stile
+3. L'IA genera un ritratto professionale in meno di un minuto — scarica in alta risoluzione
+
+PERFETTO PER
+• Candidati — Distinguiti su LinkedIn con una foto profilo impeccabile
+• Team Aziendali — Ritratti professionali coerenti per tutta l'organizzazione
+• Liberi Professionisti — Costruisci fiducia con un ritratto professionale su sito e proposte
+• Agenti Immobiliari — Fai un'ottima prima impressione su annunci e biglietti da visita
+• Dirigenti — Profili aziendali, conferenze, foto per la stampa
+• Imprenditori — Pagine "Chi siamo", pitch deck, aggiornamenti per investitori
+
+Unisciti alle migliaia di professionisti che si affidano a BizShot. Scarica oggi.
+
+PREZZI — SISTEMA A CREDITI
+Ogni ritratto costa 5 crediti. L'esportazione 4K ultra-HD costa 10 crediti.
+• 50 Crediti — 4,90 $ (10 ritratti)
+• 200 Crediti — 9,90 $ (40 ritratti)
+• 1.000 Crediti — 29 $ (200 ritratti)
+I crediti non scadono mai. Acquisto unico, nessun abbonamento.
+
+Privacy: https://bizshot.mxcode.com/privacy.html
+Termini: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Keywords:
+headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,ritratto,foto professionale,curriculum,vitello,dirigente
+
+
+================================================================================
+Español (Spanish)
+================================================================================
+
+Promotional Text:
+Retratos profesionales con IA en menos de un minuto. Fotos ejecutivas de calidad estudio a partir de un solo selfie. Descarga BizShot y pruébalo gratis.
+
+Description:
+BizShot es la app de retratos profesionales impulsada por IA que convierte un solo selfie en impresionantes fotos ejecutivas de calidad estudio en menos de un minuto. Sin fotógrafo, sin estudio, sin complicaciones.
+
+¿POR QUÉ BIZSHOT?
+• Calidad Estudio
+  Entrenada con miles de retratos profesionales. Resultados nítidos, naturales, indistinguibles de la fotografía de estudio real — por una fracción del costo.
+• Rapidísimo
+  La mayoría de los retratos están listos en menos de un minuto. Sin esperar días a que un fotógrafo haga las fotos, las edite y las entregue.
+• Diseñado para los Negocios
+  Tanto si eres un solicitante de empleo actualizando tu LinkedIn, un equipo corporativo que necesita retratos consistentes o un ejecutivo renovando su perfil — BizShot te ofrece retratos ejecutivos profesionales de los que estarás orgulloso.
+• Privacidad Primero
+  Tus fotos están cifradas durante la transferencia y el procesamiento. Nunca se usan para entrenar la IA, nunca se comparten con terceros.
+• Derechos Comerciales Completos
+  Eres dueño de todos los derechos comerciales de tus retratos generados. Úsalos en LinkedIn, web de tu empresa, firmas de correo, tarjetas de visita — donde quieras.
+
+CÓMO FUNCIONA
+1. Sube un solo selfie o retrato claro
+2. Elige tu ropa, fondo y estilo
+3. La IA genera un retrato profesional en menos de un minuto — descarga en alta resolución
+
+PERFECTO PARA
+• Buscadores de Empleo — Destaca en LinkedIn con una foto de perfil impecable
+• Equipos Corporativos — Retratos profesionales consistentes para toda tu organización
+• Freelancers — Genera confianza con un retrato profesional en tu web y propuestas
+• Agentes Inmobiliarios — Causa una gran primera impresión en anuncios y tarjetas
+• Ejecutivos y Líderes — Perfiles corporativos, conferencias, fotos de prensa
+• Emprendedores — Páginas "Sobre nosotros", pitch decks, actualizaciones para inversores
+
+Únete a los miles de profesionales que confían en BizShot. Descárgala hoy.
+
+PRECIOS — SISTEMA DE CRÉDITOS
+Cada retrato cuesta 5 créditos. La exportación 4K ultra-HD cuesta 10 créditos.
+• 50 Créditos — 4,90 $ (10 retratos)
+• 200 Créditos — 9,90 $ (40 retratos)
+• 1,000 Créditos — 29 $ (200 retratos)
+Los créditos nunca caducan. Pago único, sin suscripciones.
+
+Privacidad: https://bizshot.mxcode.com/privacy.html
+Términos: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+
+Keywords:
+headshot pro,professional headshot,ai,business headshot,LinkedIn headshot,headshot generator,retrato,foto profesional,currículum,ejecutivo,corporativo
